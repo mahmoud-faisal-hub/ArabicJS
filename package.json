@@ -1,5 +1,5 @@
 {
-  "name": "arabicjs",
+  "name": "en-arabicjs",
   "version": "0.0.0-development",
   "type": "module",
   "main": "./dist/arabic.umd.cjs",
