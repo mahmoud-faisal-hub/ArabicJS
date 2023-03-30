@@ -1,6 +1,6 @@
-# ArabicJS
+# En ArabicJS
 
-ArabicJS is a library to convert English date, time, numbers, etc. to arabic and vice versa.
+En ArabicJS is a library to convert English date, time, numbers, etc. to arabic and vice versa.
 
 ## License
 [MIT](./LICENSE.md)
