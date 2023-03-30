@@ -17,7 +17,8 @@ const config = {
       "assets": ["dist/**/*.{js,ts}", "dist/**/*.{js,ts}.map", "docs", "package.json", "package-lock.json"],
       "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
     }],
-    "@semantic-release/github"
+    "@semantic-release/github",
+    "@semantic-release/npm"
   ]
 }
 
