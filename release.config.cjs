@@ -1,5 +1,5 @@
 const config = {
-  branches: ['main', 'alpha', 'beta'],
+  branches: ['main', {'name': 'alpha', 'prerelease': true}, {'name': 'beta', 'prerelease': true}],
   "plugins": [
     ["@semantic-release/commit-analyzer", {
       "preset": "angular",
