@@ -3,20 +3,19 @@
 name: Publish
 
 on:
-  workflow_run:
-    workflows: [ Tests ]
-    branches: [ main, alpha, beta ]
-    types: 
-      - completed
+  push:
+    branches: [main, alpha, beta]
 
 jobs:
+  tests:
+    uses: ./.github/workflows/tests.yml
   publish-npm:
     permissions: 
       contents: write
       issues: write
       pull-requests: write 
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    needs: [Tests]
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
