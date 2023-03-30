@@ -1,13 +1,13 @@
-name: Test
+name: Tests
 
 on:
   push:
-    branches: [ main, alpha, 'beta' ]
+    branches: [ main, alpha, beta ]
   pull_request:
-    branches: [ main, alpha, 'beta' ]
+    branches: [ main, alpha, beta ]
 
 jobs:
-  test:
+  tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
