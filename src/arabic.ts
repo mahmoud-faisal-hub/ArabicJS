@@ -40,7 +40,7 @@ class ArabicJs {
      *
      * @api public
      * @method toEnglishDate
-     * @param {Boolean} shorten 
+     * @param {Boolean} shorten default false
      * @return {Object} ArabicJs Object
      */
     public toEnglishDate(shorten: Boolean = false) : this {
@@ -89,10 +89,11 @@ class ArabicJs {
      *
      * @api public
      * @method toEnglish
+     * @param {Boolean} shorten default false
      * @return {Object} ArabicJs Object
      */
-    public toEnglish() : this {
-        this.str = converters.toEnglish(this.str);
+    public toEnglish(shorten: Boolean = false) : this {
+        this.str = converters.toEnglish(this.str, shorten);
         return this;
     }
 

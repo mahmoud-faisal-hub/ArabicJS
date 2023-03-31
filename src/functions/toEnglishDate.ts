@@ -5,7 +5,7 @@ import { standarizeArabic } from '../helpers';
  * 
  * @function toEnglishDate
  * @param {String} str 
- * @param {Boolean} shorten 
+ * @param {Boolean} shorten default false
  * @returns {String}
  */
 const toEnglishDate = (str: string, shorten: Boolean = false) : string => {
