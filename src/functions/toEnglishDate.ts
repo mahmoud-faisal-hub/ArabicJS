@@ -1,5 +1,13 @@
 import { standarizeArabic } from '../helpers';
 
+/**
+ * Used for convert Arabic date to English
+ * 
+ * @function toEnglishDate
+ * @param {String} str 
+ * @param {Boolean} shorten 
+ * @returns {String}
+ */
 const toEnglishDate = (str: string, shorten: Boolean = false) : string => {
     let englishDate: Array<string> = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December', 'Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'am', 'pm'];
     let englishDateShorten: Array<string> = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'am', 'pm'];

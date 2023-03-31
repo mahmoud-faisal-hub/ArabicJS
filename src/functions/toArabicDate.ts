@@ -1,3 +1,10 @@
+/**
+ * Used for convert English date to Arabic
+ * 
+ * @function toArabicDate
+ * @param {String} str 
+ * @returns {String}
+ */
 const toArabicDate = (str: string) : string => {
     let englishDate: Array<string> = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december', 'saturday', 'sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'am', 'pm'];
     let englishDateShorten: Array<string> = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec', 'sat', 'sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'am', 'pm'];

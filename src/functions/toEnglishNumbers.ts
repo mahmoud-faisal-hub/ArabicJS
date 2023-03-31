@@ -1,3 +1,10 @@
+/**
+ * Used for convert Arabic numbers to English
+ * 
+ * @function toEnglishNumbers
+ * @param {(String|Number)} str 
+ * @returns {String}
+ */
 const toEnglishNumbers = (str: string|number) : string => {
     str = String(str);
     
