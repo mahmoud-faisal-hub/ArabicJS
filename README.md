@@ -26,7 +26,7 @@ import { toArabicNumbers,  toArabicDate } from 'en-arabicjs'; // import only the
 [toEnglishDate](#convert-arabic-date-to-english) - 
 [toArabic](#convert-english-numbers-and-date-to-arabic) -
 [toEnglish](#convert-arabic-numbers-and-date-to-english) -
-[decodeURL & fixURL](#fix-or-decode-the-urls-contains-arabic-chars)
+[decodeURL & fixURL](#fix-or-decode-the-urls-contains-arabic-chars) -
 [Chaining](#chaining-usage)
 
 ## Documentation
