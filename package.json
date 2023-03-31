@@ -1,6 +1,7 @@
 {
   "name": "en-arabicjs",
   "version": "0.0.0-development",
+  "description": "Package to convert English date, time, numbers, etc. to arabic and vice-versa.",
   "type": "module",
   "main": "./dist/arabic.umd.cjs",
   "module": "./dist/arabic.es.js",
@@ -36,10 +37,28 @@
     "vite-plugin-dts": "^2.1.0",
     "vitest": "^0.29.8"
   },
+  "author": "Mahmoud Faisal <dev.mahmoudfaisal@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mahmoud-faisal-hub/ArabicJS.git"
+    "url": "https://github.com/mahmoud-faisal-hub/En-ArabicJS.git"
   },
+  "bugs": {
+    "url": "https://github.com/mahmoud-faisal-hub/En-ArabicJS/issues"
+  },
+  "keywords": [
+    "En-ArabicJs",
+    "arabic",
+    "arabicjs",
+    "english",
+    "englishjs",
+    "convert",
+    "conversion",
+    "numbers",
+    "date",
+    "time",
+    "translate",
+    "i18n"
+  ],
   "license": "MIT",
   "config": {
     "commitizen": {
