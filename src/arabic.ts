@@ -7,7 +7,8 @@ interface ArabicJs {
 class ArabicJs {
     private str: string;
     
-    constructor(str: string) {
+    constructor(str: string|number) {
+        str = String(str);
         this.str = str;
     }
 
@@ -43,7 +44,8 @@ class ArabicJs {
 
 ArabicJs.prototype.fixURL = ArabicJs.prototype.decodeURL;
 
-const arabicJs = (str: string) => {
+const arabicJs = (str: string|number) => {
+    str = String(str);
     return new ArabicJs(str);
 }
 
