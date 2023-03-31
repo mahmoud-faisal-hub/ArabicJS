@@ -1,6 +1,6 @@
 import { test, expect } from 'vitest';
-import { toEnglishDate } from '../src/functions';
-import ArabicJS from '../src/index';
+import { toEnglishDate } from '../src';
+import ArabicJS from '../src';
 
 test('convert arabic date to english', () => {
   expect(toEnglishDate("تم نشر هذا الخبر يوم -الأحد الموافق يونيو, 25 ص")).toBe("تم نشر هذا الخبر يوم -Sunday الموافق June, 25 am");

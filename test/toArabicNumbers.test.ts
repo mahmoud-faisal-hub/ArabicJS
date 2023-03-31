@@ -1,6 +1,6 @@
 import { test, expect } from 'vitest';
-import { toArabicNumbers } from '../src/functions';
-import ArabicJS from '../src/index';
+import { toArabicNumbers } from '../src';
+import ArabicJS from '../src';
 
 test('convert english numbers to arabic', () => {
   expect(toArabicNumbers("تاريخ اليوم 30/3/2023")).toBe("تاريخ اليوم ٣٠/٣/٢٠٢٣");
