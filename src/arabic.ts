@@ -73,6 +73,30 @@ class ArabicJs {
     }
 
     /**
+     * Used for convert English numbers and date to Arabic
+     *
+     * @api public
+     * @method toArabic
+     * @return {Object} ArabicJs Object
+     */
+    public toArabic() : this {
+        this.str = converters.toArabic(this.str);
+        return this;
+    }
+
+    /**
+     * Used for convert Arabic numbers and date to English
+     *
+     * @api public
+     * @method toEnglish
+     * @return {Object} ArabicJs Object
+     */
+    public toEnglish() : this {
+        this.str = converters.toEnglish(this.str);
+        return this;
+    }
+
+    /**
      * Used to decode and fix URLs contains Arabic characters
      *
      * @api public
