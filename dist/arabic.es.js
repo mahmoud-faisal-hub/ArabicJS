@@ -1,34 +1,61 @@
-var h = Object.defineProperty;
-var p = (e, t, r) => t in e ? h(e, t, { enumerable: !0, configurable: !0, writable: !0, value: r }) : e[t] = r;
-var l = (e, t, r) => (p(e, typeof t != "symbol" ? t + "" : t, r), r);
-const g = (e) => {
-  let t = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december", "saturday", "sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "am", "pm"], r = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec", "sat", "sun", "mon", "tue", "wed", "thu", "fri", "am", "pm"], i = ["يناير", "فبراير", "مارس", "إبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر", "السبت", "الأحد", "الإثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "ص", "م"];
-  return e.trim().split(/\s+/).map((s) => {
-    let a = s.replace(/[^a-zA-Z ]/g, ""), n = a.toLowerCase();
-    return t.includes(n) ? s.replace(a, i[t.indexOf(n)]) : r.includes(n) ? s.replace(a, i[r.indexOf(n)]) : s;
+var b = Object.defineProperty;
+var g = (t, r, e) => r in t ? b(t, r, { enumerable: !0, configurable: !0, writable: !0, value: e }) : t[r] = e;
+var h = (t, r, e) => (g(t, typeof r != "symbol" ? r + "" : r, e), e);
+const d = (t) => {
+  let r = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december", "saturday", "sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "am", "pm"], e = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec", "sat", "sun", "mon", "tue", "wed", "thu", "fri", "am", "pm"], u = ["يناير", "فبراير", "مارس", "إبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر", "السبت", "الأحد", "الإثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "ص", "م"];
+  return t.trim().split(/\s+/).map((i) => {
+    let s = i.replace(/[^a-zA-Z ]/g, ""), n = s.toLowerCase();
+    return r.includes(n) ? i.replace(s, u[r.indexOf(n)]) : e.includes(n) ? i.replace(s, u[e.indexOf(n)]) : i;
   }).join(" ").toString();
-}, b = (e) => e.replace(/[أإآ]/g, "ا").replace(/[ؤ]/g, "و").replace(/[ىئ]/g, "ي").replace(/[ه]/g, "ة"), m = (e, t = !1) => {
-  let r = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December", "Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "am", "pm"], i = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "am", "pm"], u = ["يناير", "فبراير", "مارس", "ابريل", "مايو", "يونيو", "يوليو", "اغسطس", "سبتمبر", "اكتوبر", "نوفمبر", "ديسمبر", "السبت", "الاحد", "الاثنين", "الثلاثاء", "الاربعاء", "الخميس", "الجمعة", "ص", "م"];
-  return e.trim().split(/\s+/).map((a) => {
-    let n = a.replace(/[^ء-ي ]/g, ""), o = b(n);
-    return u.includes(o) ? t ? a.replace(n, i[u.indexOf(o)]) : a.replace(n, r[u.indexOf(o)]) : a;
+}, m = (t) => t.replace(/[أإآ]/g, "ا").replace(/[ؤ]/g, "و").replace(/[ىئ]/g, "ي").replace(/[ه]/g, "ة"), p = (t, r = !1) => {
+  let e = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December", "Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "am", "pm"], u = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "am", "pm"], o = ["يناير", "فبراير", "مارس", "ابريل", "مايو", "يونيو", "يوليو", "اغسطس", "سبتمبر", "اكتوبر", "نوفمبر", "ديسمبر", "السبت", "الاحد", "الاثنين", "الثلاثاء", "الاربعاء", "الخميس", "الجمعة", "ص", "م"];
+  return t.trim().split(/\s+/).map((s) => {
+    let n = s.replace(/[^ء-ي ]/g, ""), c = m(n);
+    return o.includes(c) ? r ? s.replace(n, u[o.indexOf(c)]) : s.replace(n, e[o.indexOf(c)]) : s;
   }).join(" ").toString();
-}, y = (e) => {
-  e = String(e);
-  let t = ["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"];
-  return e.replace(/[0-9]/g, function(r) {
-    return t[+r];
+}, f = (t) => {
+  t = String(t);
+  let r = ["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"];
+  return t.replace(/[0-9]/g, function(e) {
+    return r[+e];
   });
-}, f = (e) => (e = String(e), e.replace(/[٠-٩]/g, (t) => String("٠١٢٣٤٥٦٧٨٩".indexOf(t)))), A = (e) => d(e).toArabicNumbers().toArabicDate().toString(), S = (e, t = !1) => d(e).toEnglishNumbers().toEnglishDate(t).toString(), D = (e) => decodeURIComponent(JSON.parse('"' + e.replace(/\"/g, '\\"') + '"'));
-class c {
+}, S = (t) => (t = String(t), t.replace(/[٠-٩]/g, (r) => String("٠١٢٣٤٥٦٧٨٩".indexOf(r)))), A = (t) => a(t).toArabicNumbers().toArabicDate().toString(), y = (t, r = !1) => a(t).toEnglishNumbers().toEnglishDate(r).toString(), D = (t, r = "ar") => {
+  switch (r) {
+    case "ar":
+      return a(t).toArabicNumbers().toString();
+    case "en":
+      return a(t).toEnglishNumbers().toString();
+    default:
+      return a(t).toArabicNumbers().toString();
+  }
+}, N = (t, r = "ar", e = !1) => {
+  switch (r) {
+    case "ar":
+      return a(t).toArabicDate().toString();
+    case "en":
+      return a(t).toEnglishDate(e).toString();
+    default:
+      return a(t).toArabicDate().toString();
+  }
+}, E = (t, r = "ar", e = !1) => {
+  switch (r) {
+    case "ar":
+      return a(t).toArabicNumbers().toArabicDate().toString();
+    case "en":
+      return a(t).toEnglishNumbers().toEnglishDate(e).toString();
+    default:
+      return a(t).toArabicNumbers().toArabicDate().toString();
+  }
+}, J = (t) => decodeURIComponent(JSON.parse('"' + t.replace(/\"/g, '\\"') + '"'));
+class l {
   /**
    * Create the initial string
    *
    * @param {(String|Number)} str
    */
-  constructor(t) {
-    l(this, "str");
-    t = String(t), this.str = t;
+  constructor(r) {
+    h(this, "str");
+    r = String(r), this.str = r;
   }
   /**
    * Used for convert English date to Arabic
@@ -38,7 +65,7 @@ class c {
    * @return {Object} ArabicJs Object
    */
   toArabicDate() {
-    return this.str = g(this.str), this;
+    return this.str = d(this.str), this;
   }
   /**
    * Used for convert Arabic date to English
@@ -48,8 +75,21 @@ class c {
    * @param {Boolean} shorten default false
    * @return {Object} ArabicJs Object
    */
-  toEnglishDate(t = !1) {
-    return this.str = m(this.str, t), this;
+  toEnglishDate(r = !1) {
+    return this.str = p(this.str, r), this;
+  }
+  /**
+   * Used for convert date to specified locale
+   *
+   * @api public
+   * @method transDate
+   * @param {(String|Number)} str
+   * @param {String} locale default 'ar'
+   * @param {Boolean} shorten default false
+   * @return {Object} ArabicJs Object
+   */
+  transDate(r = "ar", e = !1) {
+    return this.str = N(this.str, r, e), this;
   }
   /**
    * Used for convert English numbers to Arabic
@@ -59,7 +99,7 @@ class c {
    * @return {Object} ArabicJs Object
    */
   toArabicNumbers() {
-    return this.str = y(this.str), this;
+    return this.str = f(this.str), this;
   }
   /**
    * Used for convert Arabic numbers to English
@@ -69,7 +109,19 @@ class c {
    * @return {Object} ArabicJs Object
    */
   toEnglishNumbers() {
-    return this.str = f(this.str), this;
+    return this.str = S(this.str), this;
+  }
+  /**
+   * Used for convert numbers to specified locale
+   *
+   * @api public
+   * @method transNumbers
+   * @param {(String|Number)} str
+   * @param {String} locale default 'ar'
+   * @return {Object} ArabicJs Object
+   */
+  transNumbers(r = "ar") {
+    return this.str = D(this.str, r), this;
   }
   /**
    * Used for convert English numbers and date to Arabic
@@ -89,8 +141,21 @@ class c {
    * @param {Boolean} shorten default false
    * @return {Object} ArabicJs Object
    */
-  toEnglish(t = !1) {
-    return this.str = S(this.str, t), this;
+  toEnglish(r = !1) {
+    return this.str = y(this.str, r), this;
+  }
+  /**
+   * Used for convert numbers and date to specified locale
+   *
+   * @api public
+   * @method trans
+   * @param {(String|Number)} str
+   * @param {String} locale default 'ar'
+   * @param {Boolean} shorten default false
+   * @return {Object} ArabicJs Object
+   */
+  trans(r = "ar", e = !1) {
+    return this.str = E(this.str, r, e), this;
   }
   /**
    * Used to decode and fix URLs contains Arabic characters
@@ -100,7 +165,7 @@ class c {
    * @return {Object} ArabicJs Object
    */
   decodeURL() {
-    return this.str = D(this.str), this;
+    return this.str = J(this.str), this;
   }
   /**
    * Used to return the string value after conversion
@@ -113,16 +178,19 @@ class c {
     return this.str;
   }
 }
-c.prototype.fixURL = c.prototype.decodeURL;
-const d = (e) => (e = String(e), new c(e));
+l.prototype.fixURL = l.prototype.decodeURL;
+const a = (t) => (t = String(t), new l(t));
 export {
-  D as decodeURL,
-  d as default,
-  D as fixURL,
+  J as decodeURL,
+  a as default,
+  J as fixURL,
   A as toArabic,
-  g as toArabicDate,
-  y as toArabicNumbers,
-  S as toEnglish,
-  m as toEnglishDate,
-  f as toEnglishNumbers
+  d as toArabicDate,
+  f as toArabicNumbers,
+  y as toEnglish,
+  p as toEnglishDate,
+  S as toEnglishNumbers,
+  E as trans,
+  N as transDate,
+  D as transNumbers
 };

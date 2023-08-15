@@ -24,6 +24,17 @@ declare class ArabicJs {
      */
     toEnglishDate(shorten?: boolean): this;
     /**
+     * Used for convert date to specified locale
+     *
+     * @api public
+     * @method transDate
+     * @param {(String|Number)} str
+     * @param {String} locale default 'ar'
+     * @param {Boolean} shorten default false
+     * @return {Object} ArabicJs Object
+     */
+    transDate(locale?: string, shorten?: boolean): this;
+    /**
      * Used for convert English numbers to Arabic
      *
      * @api public
@@ -39,6 +50,16 @@ declare class ArabicJs {
      * @return {Object} ArabicJs Object
      */
     toEnglishNumbers(): this;
+    /**
+     * Used for convert numbers to specified locale
+     *
+     * @api public
+     * @method transNumbers
+     * @param {(String|Number)} str
+     * @param {String} locale default 'ar'
+     * @return {Object} ArabicJs Object
+     */
+    transNumbers(locale?: string): this;
     /**
      * Used for convert English numbers and date to Arabic
      *
@@ -56,6 +77,17 @@ declare class ArabicJs {
      * @return {Object} ArabicJs Object
      */
     toEnglish(shorten?: boolean): this;
+    /**
+     * Used for convert numbers and date to specified locale
+     *
+     * @api public
+     * @method trans
+     * @param {(String|Number)} str
+     * @param {String} locale default 'ar'
+     * @param {Boolean} shorten default false
+     * @return {Object} ArabicJs Object
+     */
+    trans(locale?: string, shorten?: boolean): this;
     /**
      * Used to decode and fix URLs contains Arabic characters
      *
