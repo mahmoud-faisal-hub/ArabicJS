@@ -49,6 +49,21 @@ class ArabicJs {
     }
 
     /**
+     * Used for convert date to specified locale
+     * 
+     * @api public
+     * @method transDate
+     * @param {(String|Number)} str 
+     * @param {String} locale default 'ar'
+     * @param {Boolean} shorten default false
+     * @return {Object} ArabicJs Object
+     */
+    public transDate(locale: string = 'ar', shorten: Boolean = false) : this {
+        this.str = converters.transDate(this.str, locale, shorten);
+        return this;
+    }
+
+    /**
      * Used for convert English numbers to Arabic
      *
      * @api public
@@ -69,6 +84,20 @@ class ArabicJs {
      */
     public toEnglishNumbers() : this {
         this.str = converters.toEnglishNumbers(this.str);
+        return this;
+    }
+
+    /**
+     * Used for convert numbers to specified locale
+     * 
+     * @api public
+     * @method transNumbers
+     * @param {(String|Number)} str 
+     * @param {String} locale default 'ar'
+     * @return {Object} ArabicJs Object
+     */
+    public transNumbers(locale: string = 'ar') : this {
+        this.str = converters.transNumbers(this.str, locale);
         return this;
     }
 
@@ -94,6 +123,21 @@ class ArabicJs {
      */
     public toEnglish(shorten: Boolean = false) : this {
         this.str = converters.toEnglish(this.str, shorten);
+        return this;
+    }
+
+    /**
+     * Used for convert numbers and date to specified locale
+     * 
+     * @api public
+     * @method trans
+     * @param {(String|Number)} str 
+     * @param {String} locale default 'ar'
+     * @param {Boolean} shorten default false
+     * @return {Object} ArabicJs Object
+     */
+    public trans(locale: string = 'ar', shorten: Boolean = false) : this {
+        this.str = converters.trans(this.str, locale, shorten);
         return this;
     }
 
