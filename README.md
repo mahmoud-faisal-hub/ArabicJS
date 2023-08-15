@@ -26,6 +26,9 @@ import { toArabicNumbers,  toArabicDate } from 'en-arabicjs'; // import only the
 [toEnglishDate](#convert-arabic-date-to-english) - 
 [toArabic](#convert-english-numbers-and-date-to-arabic) -
 [toEnglish](#convert-arabic-numbers-and-date-to-english) -
+[transDate](#translate-date-to-specefied-locale) -
+[transNumbers](#translate-numbers-to-specefied-locale) -
+[trans](#translate-date-and-numbers-to-specefied-locale) -
 [decodeURL & fixURL](#fix-or-decode-the-urls-contains-arabic-chars) -
 [Chaining](#chaining-usage)
 
@@ -102,6 +105,46 @@ And as before you can make the output shorten
 ArabicJs("تم نشر هذا الخبر يوم -الأحد الموافق يونيو, ٢٥ ص").toEnglish(true)->toString(); // return: "تم نشر هذا الخبر يوم -Sun الموافق Jun, 25 am"
 // OR
 toEnglish("تم نشر هذا الخبر يوم -الأحد الموافق يونيو, ٢٥ ص", true); // return: "تم نشر هذا الخبر يوم -Sun الموافق Jun, 25 am"
+```
+
+### Translate Date to specefied locale
+----------
+Availabe locales ['ar', 'en'] Default 'ar'
+```js
+ArabicJs("تم نشر هذا الخبر يوم -الأحد الموافق يونيو, 25 ص").transDate('en')->toString(); // return: "تم نشر هذا الخبر يوم -Sunday الموافق June, 25 am"
+// OR
+transDate("تم نشر هذا الخبر يوم -الأحد الموافق يونيو, 25 ص", 'en'); // return: "تم نشر هذا الخبر يوم -Sunday الموافق June, 25 am"
+```
+You can also chose if the returned english date is shorten or not in the previous example the default is not shorten
+```js
+ArabicJs("تم نشر هذا الخبر يوم -الأحد الموافق يونيو, 25 ص").transDate('en', true)->toString(); // return: "تم نشر هذا الخبر يوم -Sun الموافق Jun, 25 am"
+// OR
+transDate("تم نشر هذا الخبر يوم -الأحد الموافق يونيو, 25 ص", 'en', true); // return: "تم نشر هذا الخبر يوم -Sun الموافق Jun, 25 am"
+```
+
+### Translate Numbers to specefied locale
+----------
+Availabe locales ['ar', 'en'] Default 'ar'
+```js
+ArabicJs("١٢٣٤٥٦٧٨٩").transNumbers('en')->toString(); // return: "123456789"
+ArabicJs("123456789").transNumbers('ar')->toString(); // return: "١٢٣٤٥٦٧٨٩"
+
+// OR
+transNumbers("١٢٣٤٥٦٧٨٩", 'en'); // return: "123456789"
+transNumbers("123456789"); // return: "١٢٣٤٥٦٧٨٩"
+```
+
+### Translate Date and Numbers to specefied locale
+----------
+Availabe locales ['ar', 'en'] Default 'ar'
+```js
+ArabicJs("تم نشر هذا الخبر يوم -الأحد الموافق يونيو, ٢٥ ص").trans('en')->toString(); // return: "تم نشر هذا الخبر يوم -Sunday الموافق June, 25 am"
+ArabicJs("تم نشر هذا الخبر يوم -الأحد الموافق يونيو, ٢٥ ص").trans('en', true)->toString(); // return: "تم نشر هذا الخبر يوم -Sun الموافق Jun, 25 am"
+ArabicJs("تم نشر هذا الخبر يوم -Sunday الموافق June, 25 am").trans('ar')->toString(); // return: "تم نشر هذا الخبر يوم -الأحد الموافق يونيو, ٢٥ ص"
+// OR
+trans("تم نشر هذا الخبر يوم -الأحد الموافق يونيو, ٢٥ ص", 'en'); // return: "تم نشر هذا الخبر يوم -Sunday الموافق June, 25 am"
+trans("تم نشر هذا الخبر يوم -الأحد الموافق يونيو, ٢٥ ص", 'en', true); // return: "تم نشر هذا الخبر يوم -Sun الموافق Jun, 25 am"
+trans("تم نشر هذا الخبر يوم -Sunday الموافق June, 25 am", 'ar'); // return: "تم نشر هذا الخبر يوم -الأحد الموافق يونيو, ٢٥ ص"
 ```
 
 ### Fix or Decode the URLs contains Arabic chars
